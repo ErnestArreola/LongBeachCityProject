@@ -1,0 +1,30 @@
+http://localhost:8000/api/business/{license_num}
+returns business info of the business including lb, yelp, and google data
+ex. http://localhost:8000/api/business/BU20357460/
+it will return a list of information of business with license_num of BU20357460
+
+http://localhost:8000/api/zipcoderatio
+return active/delinquent ratio for each zipcode
+
+http://localhost:8000/api/buinesslist/?zipcode={zipcode}&startindex={startindex}&endindex={endindex}
+returns a list of businesses of zipcode randomly of that zipcode
+startindex and endindex indicates how many and the ranks of businesses returned
+
+ex. http://localhost:8000/api/businesslist/?zipcode=90813&startindex=0&endindex=10
+it will return a list of top 10 worst businesses of zipcode 90813 
+
+http://localhost:8000/api/socialmediascore/{license_num}/
+returns the most recent social media score of the business and basic business information
+ex. http://localhost:8000/api/socialmediascore/BU20357460/
+it will return the most recent social media score of business with license_num of BU20357460
+
+
+http://localhost:8000/api/yelphistory/{yelp_id}/
+returns the latest information of the business includes rating, num of comments
+ex. http://localhost:8000/api/yelphistory/QnNwwDCtj0F82M5LKG0yBg/
+it will return rating, num of comments, etc for that yelp account
+
+http://localhost:8000/api/googlehistory/{google_id}/
+returns the latest information of the business includes rating
+ex. http://localhost:8000/api/googlehistory/ChIJDw8gS6823YARNjmWA9Q-zeU/
+it will return rating, etc for that google account
