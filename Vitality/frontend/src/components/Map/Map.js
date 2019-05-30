@@ -23,6 +23,7 @@ var map = "";
 var ctaLayer = "";
 var legend = "";
 var markers = [];
+const api_key = process.env.REACT_APP_MAP_KEY;
 
 class Map extends Component {
   constructor(props) {
@@ -612,7 +613,7 @@ class Map extends Component {
     if (!window.google) {
       var s = document.createElement("script");
       s.type = "text/javascript";
-      s.src = `https://maps.google.com/maps/api/js?key=API_key`;
+      s.src = `https://maps.google.com/maps/api/js?key=AIzaSyCys__gg8EEH6Mor2NnnVYL8Y5qukV_mI4`;
       var x = document.getElementsByTagName("script")[0];
       x.parentNode.insertBefore(s, x);
       // Below is important.
